@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "maleo dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@airy/maleo": "0.0.9",
+    "@airy/maleo-css-plugin": "0.0.9",
+    "axios": "^0.18.0",
+    "hoist-non-react-statics": "^3.3.0",
+    "react": "^16.8.4"
+  }
+}

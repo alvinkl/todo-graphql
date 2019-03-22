@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/",
+    "page": "./src/RootPage",
+    "routes": [
+      {
+        "path": "/",
+        "exact": true,
+        "page": "./src/TodoComponent"
+      },
+      {
+        "path": "/backlog",
+        "exact": true,
+        "page": "./src/BacklogComponent"
+      }
+    ]
+  }
+]

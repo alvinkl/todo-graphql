@@ -1,0 +1,166 @@
+{
+  "static": {
+    "app": [
+      "app.js",
+      "app.js.map"
+    ],
+    "main": [
+      "main.js",
+      "main.js.map"
+    ],
+    "npm.airy": [
+      "npm.airy.js",
+      "npm.airy.js.map"
+    ],
+    "npm.axios": [
+      "npm.axios.js",
+      "npm.axios.js.map"
+    ],
+    "npm.babel": [
+      "npm.babel.js",
+      "npm.babel.js.map"
+    ],
+    "npm.buffer": [
+      "npm.buffer.js",
+      "npm.buffer.js.map"
+    ],
+    "npm.core-js": [
+      "npm.core-js.js",
+      "npm.core-js.js.map"
+    ],
+    "npm.create-react-context": [
+      "npm.create-react-context.js",
+      "npm.create-react-context.js.map"
+    ],
+    "npm.events": [
+      "npm.events.js",
+      "npm.events.js.map"
+    ],
+    "npm.eventsource": [
+      "npm.eventsource.js",
+      "npm.eventsource.js.map"
+    ],
+    "npm.fbjs": [
+      "npm.fbjs.js",
+      "npm.fbjs.js.map"
+    ],
+    "npm.history": [
+      "npm.history.js",
+      "npm.history.js.map"
+    ],
+    "npm.hoist-non-react-statics": [
+      "npm.hoist-non-react-statics.js",
+      "npm.hoist-non-react-statics.js.map"
+    ],
+    "npm.node-libs-browser": [
+      "npm.node-libs-browser.js",
+      "npm.node-libs-browser.js.map"
+    ],
+    "npm.object-assign": [
+      "npm.object-assign.js",
+      "npm.object-assign.js.map"
+    ],
+    "npm.path-to-regexp": [
+      "npm.path-to-regexp.js",
+      "npm.path-to-regexp.js.map"
+    ],
+    "npm.process": [
+      "npm.process.js",
+      "npm.process.js.map"
+    ],
+    "npm.prop-types": [
+      "npm.prop-types.js",
+      "npm.prop-types.js.map"
+    ],
+    "npm.react": [
+      "npm.react.js",
+      "npm.react.js.map"
+    ],
+    "npm.react-dom": [
+      "npm.react-dom.js",
+      "npm.react-dom.js.map"
+    ],
+    "npm.react-is": [
+      "npm.react-is.js",
+      "npm.react-is.js.map"
+    ],
+    "npm.react-loadable": [
+      "npm.react-loadable.js",
+      "npm.react-loadable.js.map"
+    ],
+    "npm.react-router": [
+      "npm.react-router.js",
+      "npm.react-router.js.map"
+    ],
+    "npm.react-router-dom": [
+      "npm.react-router-dom.js",
+      "npm.react-router-dom.js.map"
+    ],
+    "npm.readable-stream": [
+      "npm.readable-stream.js",
+      "npm.readable-stream.js.map"
+    ],
+    "npm.regenerator-runtime": [
+      "npm.regenerator-runtime.js",
+      "npm.regenerator-runtime.js.map"
+    ],
+    "npm.resolve-pathname": [
+      "npm.resolve-pathname.js",
+      "npm.resolve-pathname.js.map"
+    ],
+    "npm.scheduler": [
+      "npm.scheduler.js",
+      "npm.scheduler.js.map"
+    ],
+    "npm.stream-http": [
+      "npm.stream-http.js",
+      "npm.stream-http.js.map"
+    ],
+    "npm.url": [
+      "npm.url.js",
+      "npm.url.js.map"
+    ],
+    "npm.url-parse": [
+      "npm.url-parse.js",
+      "npm.url-parse.js.map"
+    ],
+    "npm.util": [
+      "npm.util.js",
+      "npm.util.js.map"
+    ],
+    "npm.value-equal": [
+      "npm.value-equal.js",
+      "npm.value-equal.js.map"
+    ],
+    "routes": [
+      "routes.js",
+      "routes.js.map"
+    ],
+    "static/runtime/webpack.js": [
+      "static/runtime/webpack.js.js",
+      "static/runtime/webpack.js.js.map"
+    ],
+    "wrap": [
+      "wrap.js",
+      "wrap.js.map"
+    ]
+  },
+  "dynamic": {
+    "dynamic.BacklogComponent-1cx81cx8": [
+      "dynamic.BacklogComponent-1cx81cx8.js",
+      "hot/hot-update.js",
+      "dynamic.BacklogComponent-1cx81cx8.js.map",
+      "hot/hot-update.js.map"
+    ],
+    "dynamic.RootPage-193yb193yb": [
+      "dynamic.RootPage-193yb193yb.js",
+      "dynamic.RootPage-193yb193yb.js.map"
+    ],
+    "dynamic.TodoComponent-iys7piys7p": [
+      "dynamic.TodoComponent-iys7piys7p.js",
+      "hot/hot-update.js",
+      "dynamic.TodoComponent-iys7piys7p.js.map",
+      "hot/hot-update.js.map"
+    ]
+  }
+}
