@@ -31,13 +31,21 @@ const generateStyle = status => {
   return style;
 };
 
-export const ListTodoList = ({ data, liStyle = {}, selectStatus }) => (
-  <li style={{ ...generateStyle(data.status), ...liStyle }}>
+export const ListTodoList = ({
+  data,
+  liStyle = {},
+  selectStatus,
+  updateStatus,
+}) => (
+  <li key={data.id} style={{ ...generateStyle(data.status), ...liStyle }}>
     <p>
       <strong>{data.description}</strong>
     </p>
-    <select>
-      <option value={data.status}>{data.status}</option>
+    <select
+      onChange={e => updateStatus({ id: data.id, status: e.target.value })}
+      value={data.status}
+    >
+      <option />
       {selectStatus.map(d => (
         <option key={d.key} value={d.value}>
           {d.value}
@@ -54,9 +62,8 @@ export const TodoList = props => {
     wrapperStyle = {},
     liStyle = {},
     graphql: { data: gqlData },
+    mutate,
   } = props;
-
-  console.log(props);
 
   return (
     <ul style={{ margin: 0, padding: 0, ...wrapperStyle }}>
@@ -65,6 +72,12 @@ export const TodoList = props => {
           data: d,
           liStyle,
           selectStatus: gqlData ? gqlData.status : [],
+          updateStatus: ({ id, status }) =>
+            mutate({
+              mutation,
+              variables: { id, status },
+              refetch: true,
+            }),
         }),
       )}
     </ul>
@@ -76,6 +89,19 @@ const query = `
     status {
       key
       value
+    }
+  }
+`;
+
+const mutation = `
+  mutation ($id: ID!, $status: TodoStatusEnum!) {
+    updateStatus(id: $id, status: $status) {
+      id,
+      description,
+      status,
+      user {
+        name
+      }
     }
   }
 `;

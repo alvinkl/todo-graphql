@@ -184,12 +184,12 @@ var GraphQLClientContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createCont
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withClient", function() { return withClient; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "XVgq");
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "Z7t5");
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "UXZV");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "UXZV");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "XVgq");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "Z7t5");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "hfKm");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "Bhuq");
@@ -211,9 +211,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _typeof(obj) { if (typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && typeof _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _extends() { _extends = _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _extends() { _extends = _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default.a || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _typeof(obj) { if (typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a === "function" && typeof _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default.a === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a === "function" && obj.constructor === _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a && obj !== _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -239,7 +239,7 @@ var withClient = function withClient(options) {
     var _options$query = options.query,
         query = _options$query === void 0 ? '' : _options$query,
         _options$variables = options.variables,
-        variables = _options$variables === void 0 ? '' : _options$variables;
+        variables = _options$variables === void 0 ? {} : _options$variables;
 
     var GQLHoC =
     /*#__PURE__*/
@@ -299,7 +299,20 @@ var withClient = function withClient(options) {
                 loading: false
               }
             }, function () {
-              refetch && _this.refetch();
+              if (typeof refetch === 'boolean') {
+                refetch && _this.refetch();
+              }
+
+              if (_typeof(refetch) === 'object') {
+                var _query = refetch.query,
+                    _refetch$variables = refetch.variables,
+                    _variables = _refetch$variables === void 0 ? {} : _refetch$variables;
+
+                _this.query({
+                  query: _query,
+                  variables: _variables
+                });
+              }
             });
           }).catch(function (error) {
             return _this.setState({
@@ -317,6 +330,11 @@ var withClient = function withClient(options) {
       _createClass(GQLHoC, [{
         key: "componentDidMount",
         value: function componentDidMount() {
+          this.context.appendQuery({
+            key: ComposedComponent.name,
+            query: query,
+            variables: variables
+          });
           this.query({
             query: query,
             variables: variables
@@ -325,6 +343,11 @@ var withClient = function withClient(options) {
             query: query,
             variables: variables
           });
+        }
+      }, {
+        key: "componentWillReceiveProps",
+        value: function componentWillReceiveProps() {
+          console.log(this.context);
         }
       }, {
         key: "render",
@@ -634,12 +657,20 @@ var ListTodoList = function ListTodoList(_ref) {
   var data = _ref.data,
       _ref$liStyle = _ref.liStyle,
       liStyle = _ref$liStyle === void 0 ? {} : _ref$liStyle,
-      selectStatus = _ref.selectStatus;
+      selectStatus = _ref.selectStatus,
+      updateStatus = _ref.updateStatus;
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+    key: data.id,
     style: _objectSpread({}, generateStyle(data.status), liStyle)
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("strong", null, data.description)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("strong", null, data.description)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", {
+    onChange: function onChange(e) {
+      return updateStatus({
+        id: data.id,
+        status: e.target.value
+      });
+    },
     value: data.status
-  }, data.status), selectStatus.map(function (d) {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", null), selectStatus.map(function (d) {
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
       key: d.key,
       value: d.value
@@ -652,8 +683,8 @@ var TodoList = function TodoList(props) {
       wrapperStyle = _props$wrapperStyle === void 0 ? {} : _props$wrapperStyle,
       _props$liStyle = props.liStyle,
       liStyle = _props$liStyle === void 0 ? {} : _props$liStyle,
-      gqlData = props.graphql.data;
-  console.log(props);
+      gqlData = props.graphql.data,
+      mutate = props.mutate;
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
     style: _objectSpread({
       margin: 0,
@@ -663,11 +694,24 @@ var TodoList = function TodoList(props) {
     return ListTodoList({
       data: d,
       liStyle: liStyle,
-      selectStatus: gqlData ? gqlData.status : []
+      selectStatus: gqlData ? gqlData.status : [],
+      updateStatus: function updateStatus(_ref2) {
+        var id = _ref2.id,
+            status = _ref2.status;
+        return mutate({
+          mutation: mutation,
+          variables: {
+            id: id,
+            status: status
+          },
+          refetch: true
+        });
+      }
     });
   }));
 };
 var query = "\n  {\n    status {\n      key\n      value\n    }\n  }\n";
+var mutation = "\n  mutation ($id: ID!, $status: TodoStatusEnum!) {\n    updateStatus(id: $id, status: $status) {\n      id,\n      description,\n      status,\n      user {\n        name\n      }\n    }\n  }\n";
 /* harmony default export */ __webpack_exports__["default"] = (Object(_gql_withgql__WEBPACK_IMPORTED_MODULE_5__["default"])({
   query: query
 })(TodoList));

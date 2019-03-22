@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export class GraphQLClient {
   axios;
+  queries = {};
 
   constructor({ baseURL, headers }) {
     this.axios = axios.create({
@@ -9,6 +10,26 @@ export class GraphQLClient {
       headers,
     });
   }
+
+  appendQuery = ({ key, query, variables }) => {
+    this.queries = {
+      ...this.queries,
+      [key]: {
+        query,
+        variables,
+      },
+    };
+  };
+
+  refetch = key => {
+    this.queries = {
+      ...this.queries,
+      [key]: {
+        ...this.queries[key],
+        refetch: true,
+      },
+    };
+  };
 
   query = ({ query, variables }) => {
     return this.axios.post('', {

@@ -223,20 +223,8 @@
     {
       "id": "G0va",
       "name": "./gql-context.js",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "G0va",
-      "name": "./gql-context.js",
       "file": "dynamic.BacklogComponent-1cx81cx8.js.map",
       "publicPath": "/_assets/dynamic.BacklogComponent-1cx81cx8.js.map"
-    },
-    {
-      "id": "G0va",
-      "name": "./gql-context.js",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     },
     {
       "id": "G0va",
@@ -247,20 +235,8 @@
     {
       "id": "G0va",
       "name": "./gql-context.js",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "G0va",
-      "name": "./gql-context.js",
       "file": "dynamic.TodoComponent-iys7piys7p.js.map",
       "publicPath": "/_assets/dynamic.TodoComponent-iys7piys7p.js.map"
-    },
-    {
-      "id": "G0va",
-      "name": "./gql-context.js",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     },
     {
       "id": "G0va",
@@ -285,20 +261,8 @@
     {
       "id": "H1w3",
       "name": "./gql-withgql.js",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "H1w3",
-      "name": "./gql-withgql.js",
       "file": "dynamic.BacklogComponent-1cx81cx8.js.map",
       "publicPath": "/_assets/dynamic.BacklogComponent-1cx81cx8.js.map"
-    },
-    {
-      "id": "H1w3",
-      "name": "./gql-withgql.js",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     },
     {
       "id": "H1w3",
@@ -309,20 +273,8 @@
     {
       "id": "H1w3",
       "name": "./gql-withgql.js",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "H1w3",
-      "name": "./gql-withgql.js",
       "file": "dynamic.TodoComponent-iys7piys7p.js.map",
       "publicPath": "/_assets/dynamic.TodoComponent-iys7piys7p.js.map"
-    },
-    {
-      "id": "H1w3",
-      "name": "./gql-withgql.js",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     }
   ],
   "./src/BacklogComponent": [
@@ -335,20 +287,8 @@
     {
       "id": "Hv9C",
       "name": "./src/BacklogComponent.jsx",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "Hv9C",
-      "name": "./src/BacklogComponent.jsx",
       "file": "dynamic.BacklogComponent-1cx81cx8.js.map",
       "publicPath": "/_assets/dynamic.BacklogComponent-1cx81cx8.js.map"
-    },
-    {
-      "id": "Hv9C",
-      "name": "./src/BacklogComponent.jsx",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     }
   ],
   "./TodoList": [
@@ -361,20 +301,8 @@
     {
       "id": "KkKk",
       "name": "./src/TodoList.jsx",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "KkKk",
-      "name": "./src/TodoList.jsx",
       "file": "dynamic.BacklogComponent-1cx81cx8.js.map",
       "publicPath": "/_assets/dynamic.BacklogComponent-1cx81cx8.js.map"
-    },
-    {
-      "id": "KkKk",
-      "name": "./src/TodoList.jsx",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     },
     {
       "id": "KkKk",
@@ -385,20 +313,8 @@
     {
       "id": "KkKk",
       "name": "./src/TodoList.jsx",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "KkKk",
-      "name": "./src/TodoList.jsx",
       "file": "dynamic.TodoComponent-iys7piys7p.js.map",
       "publicPath": "/_assets/dynamic.TodoComponent-iys7piys7p.js.map"
-    },
-    {
-      "id": "KkKk",
-      "name": "./src/TodoList.jsx",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     }
   ],
   "./src/RootPage": [
@@ -425,20 +341,8 @@
     {
       "id": "wl0N",
       "name": "./src/TodoComponent.jsx",
-      "file": "hot/hot-update.js",
-      "publicPath": "/_assets/hot/hot-update.js"
-    },
-    {
-      "id": "wl0N",
-      "name": "./src/TodoComponent.jsx",
       "file": "dynamic.TodoComponent-iys7piys7p.js.map",
       "publicPath": "/_assets/dynamic.TodoComponent-iys7piys7p.js.map"
-    },
-    {
-      "id": "wl0N",
-      "name": "./src/TodoComponent.jsx",
-      "file": "hot/hot-update.js.map",
-      "publicPath": "/_assets/hot/hot-update.js.map"
     }
   ],
   "./decode": [
@@ -1711,7 +1615,7 @@
       "publicPath": "/_assets/npm.babel.js.map"
     }
   ],
-  "../core-js/object/define-property": [
+  "@babel/runtime-corejs2/core-js/object/define-property": [
     {
       "id": "hfKm",
       "name": "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js",

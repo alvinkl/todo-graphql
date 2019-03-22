@@ -4,7 +4,7 @@ import hoistStatics from 'hoist-non-react-statics';
 import GraphQLClientContext from './gql-context';
 
 export const withClient = options => ComposedComponent => {
-  const { query = '', variables = '' } = options;
+  const { query = '', variables = {} } = options;
 
   class GQLHoC extends React.Component {
     static contextType = GraphQLClientContext;
@@ -22,8 +22,17 @@ export const withClient = options => ComposedComponent => {
     }
 
     componentDidMount() {
+      this.context.appendQuery({
+        key: ComposedComponent.name,
+        query,
+        variables,
+      });
       this.query({ query, variables });
       this.refetch = this.query.bind(null, { query, variables });
+    }
+
+    componentWillReceiveProps() {
+      console.log(this.context);
     }
 
     refetch;
@@ -59,7 +68,14 @@ export const withClient = options => ComposedComponent => {
               },
             },
             () => {
-              refetch && this.refetch();
+              if (typeof refetch === 'boolean') {
+                refetch && this.refetch();
+              }
+
+              if (typeof refetch === 'object') {
+                const { query, variables = {} } = refetch;
+                this.query({ query, variables });
+              }
             },
           );
         })

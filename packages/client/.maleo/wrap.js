@@ -24,7 +24,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "6eb3ca8d6d4132112e06";
+/******/ 	var hotCurrentHash = "533e55b50228b7a5912e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -949,6 +949,17 @@ module.exports = function create(P, D) {
 
 /***/ }),
 
+/***/ "4mXO":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "7TPF");
+
+/***/ }),
+
 /***/ "5K7Z":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_an-object.js ***!
@@ -1118,6 +1129,19 @@ module.exports = {
     }({}, false) : undefined),
   check: check
 };
+
+
+/***/ }),
+
+/***/ "7TPF":
+/*!****************************************************************************!*\
+  !*** ./node_modules/core-js/library/fn/object/get-own-property-symbols.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.symbol */ "AUvm");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "WEpk").Object.getOwnPropertySymbols;
 
 
 /***/ }),
@@ -2920,6 +2944,26 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 /***/ }),
 
+/***/ "Mqbl":
+/*!*****************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.object.keys.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 Object.keys(O)
+var toObject = __webpack_require__(/*! ./_to-object */ "JB68");
+var $keys = __webpack_require__(/*! ./_object-keys */ "w6GO");
+
+__webpack_require__(/*! ./_object-sap */ "zn7N")('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
+  };
+});
+
+
+/***/ }),
+
 /***/ "MvwC":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/library/modules/_html.js ***!
@@ -3786,6 +3830,19 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "iq4v":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/library/fn/object/keys.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.keys */ "Mqbl");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "WEpk").Object.keys;
+
+
+/***/ }),
+
 /***/ "j+vE":
 /*!********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/reflect/get.js ***!
@@ -3951,6 +4008,17 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom");
+
+/***/ }),
+
+/***/ "pLtp":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "iq4v");
 
 /***/ }),
 
@@ -4206,8 +4274,25 @@ module.exports = Object.keys || function keys(O) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GraphQLClient", function() { return GraphQLClient; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "zr5I");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "Jo+v");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-symbols */ "4mXO");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "pLtp");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "hfKm");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "zr5I");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default()(source); if (typeof _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default.a === 'function') { ownKeys = ownKeys.concat(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default()(source).filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default()(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3___default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
@@ -4220,26 +4305,43 @@ var GraphQLClient = function GraphQLClient(_ref) {
   _classCallCheck(this, GraphQLClient);
 
   this.axios = void 0;
+  this.queries = {};
 
-  this.query = function (_ref2) {
-    var query = _ref2.query,
+  this.appendQuery = function (_ref2) {
+    var key = _ref2.key,
+        query = _ref2.query,
         variables = _ref2.variables;
+    _this.queries = _objectSpread({}, _this.queries, _defineProperty({}, key, {
+      query: query,
+      variables: variables
+    }));
+  };
+
+  this.refetch = function (key) {
+    _this.queries = _objectSpread({}, _this.queries, _defineProperty({}, key, _objectSpread({}, _this.queries[key], {
+      refetch: true
+    })));
+  };
+
+  this.query = function (_ref3) {
+    var query = _ref3.query,
+        variables = _ref3.variables;
     return _this.axios.post('', {
       query: query,
       variables: variables
     });
   };
 
-  this.mutate = function (_ref3) {
-    var mutation = _ref3.mutation,
-        variables = _ref3.variables;
+  this.mutate = function (_ref4) {
+    var mutation = _ref4.mutation,
+        variables = _ref4.variables;
     return _this.axios.post('', {
       query: mutation,
       variables: variables
     });
   };
 
-  this.axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
+  this.axios = axios__WEBPACK_IMPORTED_MODULE_4___default.a.create({
     baseURL: baseURL,
     headers: headers
   });

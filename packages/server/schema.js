@@ -25,7 +25,12 @@ const STATUS_ENUMTYPE = Object.keys(STATUS).reduce(
   {},
 );
 
-const todos = [
+const GraphqlStatusEnum = new GraphQLEnumType({
+  name: 'TodoStatusEnum',
+  values: STATUS_ENUMTYPE,
+});
+
+let todos = [
   {
     id: 1,
     description: 'Todo1',
@@ -99,10 +104,7 @@ const TodoType = new GraphQLObjectType({
     id: { type: GraphQLID },
     description: { type: GraphQLString },
     status: {
-      type: new GraphQLEnumType({
-        name: 'TodoStatusEnum',
-        values: STATUS_ENUMTYPE,
-      }),
+      type: GraphqlStatusEnum,
     },
     user: {
       type: UserType,
@@ -211,6 +213,34 @@ const MutationType = new GraphQLObjectType({
             todos: [...users[userIndex].todos, newTodoId],
           },
           ...users.slice(userIndex + 1),
+        ];
+
+        return constructTodo;
+      },
+    },
+    updateStatus: {
+      type: TodoType,
+      args: {
+        id: { type: GraphQLID },
+        status: {
+          type: GraphqlStatusEnum,
+        },
+      },
+      resolve(parent, args) {
+        const { status, id } = args;
+        const tId = parseInt(id);
+
+        const todoIndex = todos.findIndex(t => t.id === tId);
+
+        const constructTodo = {
+          ...todos[todoIndex],
+          status,
+        };
+
+        todos = [
+          ...todos.slice(0, todoIndex),
+          constructTodo,
+          ...todos.slice(todoIndex + 1),
         ];
 
         return constructTodo;
