@@ -9,9 +9,23 @@ const client = new GraphQLClient({
 });
 
 export default class CustomWrap extends Wrap {
+  state = {
+    refetches: {},
+    setRefetch: (key, refetch) => {
+      this.setState({
+        refetches: {
+          ...this.state.refetches,
+          [key]: refetch,
+        },
+      });
+    },
+  };
+
   render() {
+    const { refetches, setRefetch } = this.state;
+
     return (
-      <GraphQLClientContext.Provider value={client}>
+      <GraphQLClientContext.Provider value={{ client, setRefetch, refetches }}>
         {super.render()}
       </GraphQLClientContext.Provider>
     );

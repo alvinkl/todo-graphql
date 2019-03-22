@@ -11,7 +11,7 @@ export class GraphQLClient {
     });
   }
 
-  appendQuery = ({ key, query, variables }) => {
+  appendQuery = (key, { query, variables }) => {
     this.queries = {
       ...this.queries,
       [key]: {
@@ -21,12 +21,12 @@ export class GraphQLClient {
     };
   };
 
-  refetch = key => {
+  refetch = (key, refetch = false) => {
     this.queries = {
       ...this.queries,
       [key]: {
         ...this.queries[key],
-        refetch: true,
+        refetch,
       },
     };
   };

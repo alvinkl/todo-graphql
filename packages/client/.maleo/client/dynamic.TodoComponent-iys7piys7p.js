@@ -27,12 +27,12 @@ var GraphQLClientContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createCont
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withClient", function() { return withClient; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "UXZV");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "XVgq");
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "Z7t5");
-/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "XVgq");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "Z7t5");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "UXZV");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "hfKm");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "Bhuq");
@@ -54,9 +54,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _extends() { _extends = _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _typeof(obj) { if (typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && typeof _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _typeof(obj) { if (typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a === "function" && typeof _babel_runtime_corejs2_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default.a === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a === "function" && obj.constructor === _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a && obj !== _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_2___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _extends() { _extends = _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default.a || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -83,6 +83,7 @@ var withClient = function withClient(options) {
         query = _options$query === void 0 ? '' : _options$query,
         _options$variables = options.variables,
         variables = _options$variables === void 0 ? {} : _options$variables;
+    var key = ComposedComponent.name;
 
     var GQLHoC =
     /*#__PURE__*/
@@ -95,6 +96,17 @@ var withClient = function withClient(options) {
         _classCallCheck(this, GQLHoC);
 
         _this = _possibleConstructorReturn(this, _getPrototypeOf(GQLHoC).call(this, props, context));
+
+        _this.refetch = function () {
+          var k = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : key;
+          return _this.context.setRefetch(k, true);
+        };
+
+        _this.doneRefetch = function () {
+          var k = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : key;
+          return _this.context.setRefetch(k, false);
+        };
+
         _this.state = {
           data: null,
           loading: true,
@@ -102,13 +114,12 @@ var withClient = function withClient(options) {
           refetch: _this.refetch,
           mutation: null
         };
-        _this.refetch = void 0;
 
         _this.query = function (_ref) {
           var query = _ref.query,
               variables = _ref.variables;
 
-          _this.context.query({
+          _this.context.client.query({
             query: query,
             variables: variables
           }).then(function (result) {
@@ -131,7 +142,7 @@ var withClient = function withClient(options) {
               _ref2$refetch = _ref2.refetch,
               refetch = _ref2$refetch === void 0 ? false : _ref2$refetch;
 
-          _this.context.mutate({
+          _this.context.client.mutate({
             mutation: mutation,
             variables: variables
           }).then(function (result) {
@@ -146,15 +157,8 @@ var withClient = function withClient(options) {
                 refetch && _this.refetch();
               }
 
-              if (_typeof(refetch) === 'object') {
-                var _query = refetch.query,
-                    _refetch$variables = refetch.variables,
-                    _variables = _refetch$variables === void 0 ? {} : _refetch$variables;
-
-                _this.query({
-                  query: _query,
-                  variables: _variables
-                });
+              if (typeof refetch === 'string') {
+                _this.refetch(refetch);
               }
             });
           }).catch(function (error) {
@@ -167,30 +171,28 @@ var withClient = function withClient(options) {
           });
         };
 
+        _this.context.client.appendQuery(key, {
+          query: query,
+          variables: variables
+        });
+
         return _this;
       }
 
       _createClass(GQLHoC, [{
         key: "componentDidMount",
         value: function componentDidMount() {
-          this.context.appendQuery({
-            key: ComposedComponent.name,
-            query: query,
-            variables: variables
-          });
-          this.query({
-            query: query,
-            variables: variables
-          });
-          this.refetch = this.query.bind(null, {
-            query: query,
-            variables: variables
-          });
+          this.query(this.context.client.queries[key]);
         }
       }, {
         key: "componentWillReceiveProps",
-        value: function componentWillReceiveProps() {
-          console.log(this.context);
+        value: function componentWillReceiveProps(nextProps, nextContext) {
+          var isRefetch = nextContext.refetches[key];
+
+          if (isRefetch) {
+            this.query(this.context.client.queries[key]);
+            this.doneRefetch();
+          }
         }
       }, {
         key: "render",

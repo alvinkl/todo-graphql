@@ -148,7 +148,9 @@
   "dynamic": {
     "dynamic.BacklogComponent-1cx81cx8": [
       "dynamic.BacklogComponent-1cx81cx8.js",
-      "dynamic.BacklogComponent-1cx81cx8.js.map"
+      "hot/hot-update.js",
+      "dynamic.BacklogComponent-1cx81cx8.js.map",
+      "hot/hot-update.js.map"
     ],
     "dynamic.RootPage-193yb193yb": [
       "dynamic.RootPage-193yb193yb.js",
@@ -156,7 +158,9 @@
     ],
     "dynamic.TodoComponent-iys7piys7p": [
       "dynamic.TodoComponent-iys7piys7p.js",
-      "dynamic.TodoComponent-iys7piys7p.js.map"
+      "hot/hot-update.js",
+      "dynamic.TodoComponent-iys7piys7p.js.map",
+      "hot/hot-update.js.map"
     ]
   }
 }

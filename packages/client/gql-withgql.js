@@ -5,9 +5,13 @@ import GraphQLClientContext from './gql-context';
 
 export const withClient = options => ComposedComponent => {
   const { query = '', variables = {} } = options;
+  const key = ComposedComponent.name;
 
   class GQLHoC extends React.Component {
     static contextType = GraphQLClientContext;
+
+    refetch = (k = key) => this.context.setRefetch(k, true);
+    doneRefetch = (k = key) => this.context.setRefetch(k, false);
 
     state = {
       data: null,
@@ -19,26 +23,28 @@ export const withClient = options => ComposedComponent => {
 
     constructor(props, context) {
       super(props, context);
-    }
 
-    componentDidMount() {
-      this.context.appendQuery({
-        key: ComposedComponent.name,
+      this.context.client.appendQuery(key, {
         query,
         variables,
       });
-      this.query({ query, variables });
-      this.refetch = this.query.bind(null, { query, variables });
     }
 
-    componentWillReceiveProps() {
-      console.log(this.context);
+    componentDidMount() {
+      this.query(this.context.client.queries[key]);
     }
 
-    refetch;
+    componentWillReceiveProps(nextProps, nextContext) {
+      const isRefetch = nextContext.refetches[key];
+
+      if (isRefetch) {
+        this.query(this.context.client.queries[key]);
+        this.doneRefetch();
+      }
+    }
 
     query = ({ query, variables }) => {
-      this.context
+      this.context.client
         .query({ query, variables })
         .then(result =>
           this.setState({
@@ -56,7 +62,7 @@ export const withClient = options => ComposedComponent => {
     };
 
     mutate = ({ mutation, variables, refetch = false }) => {
-      this.context
+      this.context.client
         .mutate({ mutation, variables })
         .then(result => {
           this.setState(
@@ -72,9 +78,8 @@ export const withClient = options => ComposedComponent => {
                 refetch && this.refetch();
               }
 
-              if (typeof refetch === 'object') {
-                const { query, variables = {} } = refetch;
-                this.query({ query, variables });
+              if (typeof refetch === 'string') {
+                this.refetch(refetch);
               }
             },
           );
