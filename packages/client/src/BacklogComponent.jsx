@@ -96,7 +96,13 @@ export class BacklogComponent extends React.Component {
       graphql: { data },
     } = this.props;
 
-    return <TodoList data={data.backlogs} wrapperStyle={style.list} />;
+    return (
+      <TodoList
+        data={data.backlogs}
+        wrapperStyle={style.list}
+        mutateRefetch="BacklogComponent"
+      />
+    );
   };
 
   render() {

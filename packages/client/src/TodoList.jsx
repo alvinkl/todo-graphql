@@ -63,6 +63,7 @@ export const TodoList = props => {
     liStyle = {},
     graphql: { data: gqlData },
     mutate,
+    mutateRefetch,
   } = props;
 
   return (
@@ -76,7 +77,7 @@ export const TodoList = props => {
             mutate({
               mutation,
               variables: { id, status },
-              refetch: true,
+              refetch: mutateRefetch,
             }),
         }),
       )}

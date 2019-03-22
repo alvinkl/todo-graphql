@@ -97,6 +97,19 @@ module.exports = {
 
 /***/ }),
 
+/***/ "9BDd":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/library/fn/array/is-array.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.array.is-array */ "GvbO");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "WEpk").Array.isArray;
+
+
+/***/ }),
+
 /***/ "ApPD":
 /*!*****************************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.object.get-prototype-of.js ***!
@@ -174,6 +187,21 @@ var GraphQLClientContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createCont
 
 /***/ }),
 
+/***/ "GvbO":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.array.is-array.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
+var $export = __webpack_require__(/*! ./_export */ "Y7ZC");
+
+$export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ "kAMH") });
+
+
+/***/ }),
+
 /***/ "H1w3":
 /*!************************!*\
   !*** ./gql-withgql.js ***!
@@ -198,11 +226,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "TRZx");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! hoist-non-react-statics */ "0TPh");
-/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _gql_context__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gql-context */ "G0va");
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "p0XB");
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! hoist-non-react-statics */ "0TPh");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _gql_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./gql-context */ "G0va");
+
 
 
 
@@ -311,11 +342,17 @@ var withClient = function withClient(options) {
               }
             }, function () {
               if (typeof refetch === 'boolean') {
-                refetch && _this.refetch();
+                return refetch && _this.refetch();
               }
 
               if (typeof refetch === 'string') {
-                _this.refetch(refetch);
+                return _this.refetch(refetch);
+              }
+
+              if (_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_7___default()(refetch)) {
+                return refetch.map(function (key) {
+                  return _this.refetch(key);
+                });
               }
             });
           }).catch(function (error) {
@@ -354,7 +391,7 @@ var withClient = function withClient(options) {
       }, {
         key: "render",
         value: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(ComposedComponent, _extends({}, this.props, {
+          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ComposedComponent, _extends({}, this.props, {
             graphql: this.state,
             refetch: this.refetch,
             mutate: this.mutate
@@ -363,10 +400,10 @@ var withClient = function withClient(options) {
       }]);
 
       return GQLHoC;
-    }(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+    }(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 
-    GQLHoC.contextType = _gql_context__WEBPACK_IMPORTED_MODULE_9__["default"];
-    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8___default()(GQLHoC, ComposedComponent);
+    GQLHoC.contextType = _gql_context__WEBPACK_IMPORTED_MODULE_10__["default"];
+    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_9___default()(GQLHoC, ComposedComponent);
   };
 };
 /* harmony default export */ __webpack_exports__["default"] = (withClient);
@@ -496,7 +533,8 @@ var TodoList = function TodoList(props) {
       _props$liStyle = props.liStyle,
       liStyle = _props$liStyle === void 0 ? {} : _props$liStyle,
       gqlData = props.graphql.data,
-      mutate = props.mutate;
+      mutate = props.mutate,
+      mutateRefetch = props.mutateRefetch;
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
     style: _objectSpread({
       margin: 0,
@@ -516,7 +554,7 @@ var TodoList = function TodoList(props) {
             id: id,
             status: status
           },
-          refetch: true
+          refetch: mutateRefetch
         });
       }
     });
@@ -923,6 +961,17 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 
 /***/ }),
 
+/***/ "p0XB":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "9BDd");
+
+/***/ }),
+
 /***/ "w2d+":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.array.iterator.js ***!
@@ -1072,7 +1121,8 @@ function (_React$Component) {
         return t.status === 'TODO';
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_TodoList__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        data: data
+        data: data,
+        mutateRefetch: "TodoComponent"
       });
     };
 
@@ -1082,7 +1132,8 @@ function (_React$Component) {
         return t.status === 'ON_PROGRESS';
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_TodoList__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        data: data
+        data: data,
+        mutateRefetch: "TodoComponent"
       });
     };
 
@@ -1092,7 +1143,8 @@ function (_React$Component) {
         return t.status === 'DONE';
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_TodoList__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        data: data
+        data: data,
+        mutateRefetch: "TodoComponent"
       });
     };
 

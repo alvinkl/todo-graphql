@@ -75,11 +75,15 @@ export const withClient = options => ComposedComponent => {
             },
             () => {
               if (typeof refetch === 'boolean') {
-                refetch && this.refetch();
+                return refetch && this.refetch();
               }
 
               if (typeof refetch === 'string') {
-                this.refetch(refetch);
+                return this.refetch(refetch);
+              }
+
+              if (Array.isArray(refetch)) {
+                return refetch.map(key => this.refetch(key));
               }
             },
           );

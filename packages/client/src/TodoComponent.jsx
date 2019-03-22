@@ -29,7 +29,7 @@ export class TodoComponent extends React.Component {
 
     const data = todos.filter(t => t.status === 'TODO');
 
-    return <TodoList data={data} />;
+    return <TodoList data={data} mutateRefetch="TodoComponent" />;
   };
 
   renderOnProgress = () => {
@@ -41,7 +41,7 @@ export class TodoComponent extends React.Component {
 
     const data = todos.filter(t => t.status === 'ON_PROGRESS');
 
-    return <TodoList data={data} />;
+    return <TodoList data={data} mutateRefetch="TodoComponent" />;
   };
 
   renderDone = () => {
@@ -53,7 +53,7 @@ export class TodoComponent extends React.Component {
 
     const data = todos.filter(t => t.status === 'DONE');
 
-    return <TodoList data={data} />;
+    return <TodoList data={data} mutateRefetch="TodoComponent" />;
   };
 
   render() {
