@@ -21,16 +21,11 @@ export const withClient = options => ComposedComponent => {
       mutation: null,
     };
 
-    constructor(props, context) {
-      super(props, context);
-
+    componentDidMount() {
       this.context.client.appendQuery(key, {
         query,
         variables,
       });
-    }
-
-    componentDidMount() {
       this.query(this.context.client.queries[key]);
     }
 
